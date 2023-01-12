@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:paytm2/help_page.dart';
+import 'package:paytm2/payment_page.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class ScanPage extends StatefulWidget {
@@ -75,7 +76,7 @@ class _ScanPageState extends State<ScanPage> {
               //   ],)
               // ],),
           ),
-          Positioned(bottom: 40,child: Image.asset('images/contact_bar.jpg',width: 300,height: 200,)),
+          Positioned(left:15,bottom: 25,child: Image.asset('images/contact_bar.jpg',width: 360,height: 300,)),
         ],
       ),
 
@@ -142,7 +143,7 @@ class _ScanPageState extends State<ScanPage> {
         id = '${result!.code}';
         Navigator.of(context)
             .push(MaterialPageRoute(
-          builder: (context) => HelpPage(id: id),
+          builder: (context) => PaymentPage(),
         ));
       });
     });
