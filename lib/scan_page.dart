@@ -69,15 +69,8 @@ class _ScanPageState extends State<ScanPage> {
               decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25))),
-              child: Container(
-                child: Column(children: [
-                  Row(children: [
-                    //SizedBox(height: 10,),
-                    Image.asset('images/contacts_bar.jpg',width: 50,),
-                  ],)
-                ],),
-              ),
-           ),
+
+          ),
         ],
       ),
 
@@ -94,7 +87,9 @@ class _ScanPageState extends State<ScanPage> {
           SizedBox(width: 60),
           Text('Scan Any QR Code',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
           SizedBox(width: 65),
-          IconButton(onPressed: null,icon: Icon(const IconData(0xf645, fontFamily: 'MaterialIcons', matchTextDirection: true,),size: 15,),),
+          IconButton(onPressed:(){
+            Navigator.pop(context);
+          },icon: Icon(const IconData(0xf645, fontFamily: 'MaterialIcons', matchTextDirection: true,),size: 30,),),
                //Icon(const IconData(0xf645, fontFamily: 'MaterialIcons', matchTextDirection: true),size: 15)),
 
 
