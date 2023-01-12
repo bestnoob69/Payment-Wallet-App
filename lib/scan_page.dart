@@ -69,12 +69,13 @@ class _ScanPageState extends State<ScanPage> {
               decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25))),
-              child: Column(children: [
-                Row(children: [
-                  Image.asset('images/contact_bar.jpg'),
-                ],)
-              ],),
+              // child: Column(children: [
+              //   Row(children: [
+              //     Image.asset('images/contact_bar.jpg'),
+              //   ],)
+              // ],),
           ),
+          Positioned(bottom: 40,child: Image.asset('images/contact_bar.jpg',width: 300,height: 200,)),
         ],
       ),
 
